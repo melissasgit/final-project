@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://kit.fontawesome.com/83aa9b87c9.js" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</head>
+
+<body>
+  
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__logo">
+        <img src="./assets/undraw_home-cinema_jdm1.svg" alt="Movie House Logo">
+      </div>
+
+      <ul class="nav__links">
+          <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+          <li><a href="movies.html" class="nav__link">Movies</a></li>
+          <button class="nav__search-button">
+            <li><a href="contact.html">Contact</a></li>
+          </button>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero / Search Section -->
+  <main>
+
+    <section class="hero">
+
+      <div class="hero__content">
+
+        <h1 class="hero__title">What's next on your screen?</h1>
+
+        <p class="hero__description">
+            Search your favorites. Discover your next obsession.
+        </p>
+
+        <form class="search" id="search-form">
+          <label for="search-input" class="search__label">Search for a movie:</label>
+
+          <div class="search__container">
+            <input
+                type="search"
+                id="movie-search"
+                class="search__input"
+                placeholder="Search for a movie..."
+                alt="Search for a movie"
+            >
+          </div>
+
+          <button type="submit" class="search__button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Projector -->
+    <section>
+
+      <div class="projector-area">
+
+        <img src="./assets/film-projector.png" alt="Film Projector" class="projector-img">
+        
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+        FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <p>
+        &copy; 2026 Movie House. All rights reserved.
+    </p>
+
+  </footer>
+
+</body>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie House | Movies</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://kit.fontawesome.com/83aa9b87c9.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+
+  <!-- Movies Navigation -->
+  <header class="movies-header">
+
+    <nav class="nav">
+
+      <div class="nav__logo">
+        <a href="index.html">
+            <img src="./assets/undraw_home-cinema_jdm1.svg" alt="Movie House Logo">
+        </a>
+      </div>
+
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+        <li><a href="movies.html" class="nav__link">Movies</a></li>
+        <button class="nav__search-button">
+          <li><a href="contact.html">Contact</a></li>
+        </button>
+      </ul>
+
+    </nav>
+
+
+    <!-- Search at bottom of navigation -->
+    <div class="movies-search">
+
+      <form class="search" id="search-form">
+          <label for="search-input" class="search__label">Search for a movie:</label>
+
+          <div class="search__container">
+            <input
+                type="search"
+                id="movie-search"
+                class="search__input"
+                placeholder="Search for a movie..."
+                alt="Search for a movie"
+            >
+          </div>
+
+          <button type="submit" class="search__button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+    </div>
+
+  </header>
+
+
+  <main class="movies-page">
+
+    <!-- Search Results -->
+    <section class="movie-results">
+
+      <h1>Browse Movies</h1>
+
+      <div class="movie-grid">
+
+        <div class="movie__grid--item">
+
+          <div class="movie-card">
+
+            <div class="movie-card__container">
+              
+              <h3>Movie Title</h3>
+
+              <img
+                  src="assets/movie-1.jpg"
+                  alt="Movie poster">
+
+              <p><b>Description:</b> A thrilling adventure film.</p>
+
+              <p><b>Genre:</b> Action • Adventure</p>
+
+              <p><b>Price:</b> $19.99</p>
+
+              <button>
+                  View Movie
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+<!-- Footer -->
+<footer id="contact" class="footer__movies">
+    <p>&copy; 2026 Movie House. All rights reserved.</p>
+</footer>
+
+</html>
