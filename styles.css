@@ -146,7 +146,7 @@ h1 {
 .hero {
     position: relative;
 
-    padding-bottom: 100px;
+    width: 100%;
 
     overflow: hidden;
 
@@ -161,14 +161,10 @@ h1 {
 
 .hero__content {
     position: relative;
+
     z-index: 5;
 
-    width: 100%;
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding-top: 105px;
+    margin: 48px;
 
     text-align: center;
 }
@@ -318,15 +314,12 @@ h1 {
 ======================================== */
 
 .footer {
-    position: relative;
 
     z-index: 10;
 
     padding: 25px;
 
     text-align: center;
-
-    background: #080709;
 
     color: #aaa;
 
@@ -425,19 +418,8 @@ h1 {
         width: 170px;
     }
 
-    .projector {
-        right: -40px;
-
-        transform: scale(0.8);
-        transform-origin: bottom right;
-    }
-
-    .film-strip {
-        width: 70%;
-    }
-
     .hero__content {
-        padding: 80px 25px 0;
+        padding:  25px;
     }
 }
 
@@ -500,15 +482,4 @@ h1 {
         padding: 15px;
     }
 
-    .projector {
-        right: -120px;
-
-        transform: scale(0.65);
-        transform-origin: bottom right;
-    }
-
-    .film-strip {
-        width: 85%;
-        bottom: 15%;
-    }
 }

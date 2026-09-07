@@ -1,14 +1,23 @@
-const priceSlider = document.querySelector("#price");
-const priceValue = document.querySelector("#price-value");
-
 async function fetchMovies() {
-    const movies = await fetch('http://www.omdbapi.com/?apikey=a0290d49&');
-    const moviesData = await response.json();
-    const moviesGridEl = document.querySelector(".movies-grid");
+  try {  
+  const response = await fetch('http://www.omdbapi.com/?i=tt3896198&apikey=a0290d49&t=star wars');
 
-    moviesGridEl.innerHTML = moviesData
-    .map((movie) => movieHTML(movie)).join("");
-    
+  if (!response.ok) {
+    throw new Error(`Network response was not ok`);
+  }
+
+    const moviesData = await response.json();
+    const movieGridEl = document.querySelector(".movie-grid");
+
+    if (moviesData && moviesData.Search) {
+      movieGridEl.innerHTML = moviesData.Search
+        .map((movie) => movieHTML(movie)).join("");
+    } else {
+      movieGridEl.innerHTML = "<p>No movies found.</p>";
+    }
+  } catch (error) {
+    console.error("Error fetching movies:", error);
+  }
 }
 
 fetchMovies();
@@ -17,20 +26,10 @@ function movieHTML(movie) {
     return `<div class="movie-card">
     <div class="movie-card__container">
         <h3>${movie.Title}</h3>
-        <img src="${movie.Poster}" alt="Movie poster">
-        <p><b>Description:</b> ${movie.Plot}</p>
-        <p><b>Genre:</b> ${movie.Genre}</p>
-        <p><b>Price:</b> $${movie.Price}</p>
-        <button>
+        <p><b>Year:</b> ${movie.Year}</p>
             View Movie
         </button>
     </div>
 </div>`;
-}
-
-if (priceSlider) {
-    priceSlider.addEventListener("input", function () {
-        priceValue.textContent = `$${priceSlider.value}`;
-    });
 }
 
