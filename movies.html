@@ -38,7 +38,7 @@
     <div class="movies-search">
 
       <form class="search" id="search-form">
-          <label for="search-input" class="search__label">Search for a movie:</label>
+          <label for="movie-search" class="search__label">Search for a movie:</label>
 
           <div class="search__container">
             <input
@@ -66,6 +66,16 @@
     <section class="movie-results">
 
       <h1>Browse Movies</h1>
+
+      <div class="movie-filter">
+        <label for="sort-filter">Sort by:</label>
+
+        <select id="sort-filter">
+          <option value="all">All</option>
+          <option value="newest">Newest to Oldest</option>
+          <option value="oldest">Oldest to Newest</option>
+        </select>
+      </div>
 
       <div class="movie-grid">
 

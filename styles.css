@@ -336,13 +336,85 @@ h1 {
   }
 
   .movie-results{
-    line-height: 1.5;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 550vh;
   }
 
+  .movie-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.movie-filter label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#sort-filter {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white;
+}
+
+#sort-filter:focus {
+  outline: none;
+  border-color: #6c4ab6;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    padding: 60px 0;
+}
+
+.loading i {
+    font-size: 48px;
+    animation: spinReel 2s linear infinite;
+}
+
+.loading p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    animation: loadingPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spinReel {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadingPulse {
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
   .movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 200px;
   }
 
 #search-form {
@@ -363,20 +435,17 @@ h1 {
 .movie__grid--item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 
   .movie-card {
     background-color: #1c1c1c;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 8px 8px 100px rgba(223, 179, 59, 0.842);
     transition: transform 0.2s;
   }
 
   .movie-card__container {
-    padding: 24px;
+    padding: 52px;
   }
 
 .footer__movies {
@@ -421,6 +490,24 @@ h1 {
     .hero__content {
         padding:  25px;
     }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+  .movie-card__container {
+    padding: 24px;
+  }
 }
 
 
@@ -482,4 +569,16 @@ h1 {
         padding: 15px;
     }
 
-}
+    h3 {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+  .movie-card__container {
+    padding: 8px;
+  }
+  }
