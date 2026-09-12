@@ -414,11 +414,8 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 24px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-    margin: 200px;
+    width: 90vw;
+    margin: 28px 48px;
   }
 
 #search-form {
@@ -484,6 +481,15 @@ h1 {
    RESPONSIVE
 ======================================== */
 
+@media (max-width: 1200px) {
+    .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 900px) {
 
     .nav {
@@ -521,7 +527,8 @@ h1 {
     }
 
     .movie-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -598,6 +605,9 @@ h1 {
     }
 
     .movie-grid {
-        grid-template-columns: 1fr;
-    }  
-  }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 15px;
+    }
+}

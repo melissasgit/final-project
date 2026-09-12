@@ -132,10 +132,6 @@ function movieHTML(movie) {
                     alt="${movie.Title} poster"
                 >
 
-                <button>
-                    View Movie
-                </button>
-
             </div>
 
         </div>
